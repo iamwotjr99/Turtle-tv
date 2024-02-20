@@ -38,8 +38,8 @@ span {
 
 button {
     border-radius: 20px;
-    border: 1px solid #FF4B2B;
-    background-color: #FF4B2B;
+    border: 1px solid #347701;
+    background-color: #347701;
     color: #FFFFFF;
     font-size: 12px;
     font-weight: bold;
@@ -153,9 +153,9 @@ input {
 }
 
 .overlay {
-    background: #FF416C;
-    background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);
-    background: linear-gradient(to right, #FF4B2B, #FF416C);
+    background: #87ff2b;
+    background: -webkit-linear-gradient(to right, #347701, #50b801e0);
+    background: linear-gradient(to right, #347701, #50b801e0);
     background-repeat: no-repeat;
     background-size: cover;
     color: #FFFFFF;
@@ -207,8 +207,7 @@ input {
     margin: 20px 0;
 }
   
-.social-container a {
-    border: 1px solid #DDDDDD;
+.social-container .social-btn {
     border-radius: 50%;
     display: inline-flex;
     justify-content: center;
@@ -235,7 +234,7 @@ footer p {
 }
 
 footer i {
-    color: red;
+    color: green;
 }
 
 footer a {

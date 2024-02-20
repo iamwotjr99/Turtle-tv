@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { loginFail, loginSuccess } from "../../features/login/loginSlice";
 import { loginRequest } from "../../service/LoginService";
+import {faFacebook, faGooglePlusG, faLinkedin} from "@fortawesome/free-brands-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "../../css/loginHome.css";
 
 export default function LoginHome() {
@@ -37,9 +39,9 @@ export default function LoginHome() {
                 <form>
                     <h1>회원 가입</h1>
                     <div className="social-container">
-                        <Link href="#" className="social"><i className="fab fa-facebook-f"></i></Link>
-                        <Link href="#" className="social"><i className="fab fa-google-plus-g"></i></Link>
-                        <Link href="#" className="social"><i className="fab fa-linkedin-in"></i></Link>
+                        <FontAwesomeIcon className="social-btn" icon={faFacebook} />
+                        <FontAwesomeIcon className="social-btn" icon={faGooglePlusG} />
+                        <FontAwesomeIcon className="social-btn" icon={faLinkedin} />
                     </div>
                     <span>또는 나의 이메일로 등록하기</span>
                     <input type="text" placeholder="이름을 입력해주세요." name="name"
@@ -61,9 +63,9 @@ export default function LoginHome() {
                 <form onSubmit={onClickLogin}>
                     <h1>로그인</h1>
                     <div className="social-container">
-                        <Link href="#" className="social"><i className="fab fa-facebook-f"></i></Link>
-                        <Link href="#" className="social"><i className="fab fa-google-plus-g"></i></Link>
-                        <Link href="#" className="social"><i className="fab fa-linkedin-in"></i></Link>
+                        <FontAwesomeIcon className="social-btn" icon={faFacebook} />
+                        <FontAwesomeIcon className="social-btn" icon={faGooglePlusG} />
+                        <FontAwesomeIcon className="social-btn" icon={faLinkedin} />
                     </div>
                     <span>또는 나의 계정 사용하기</span>
                     <input type="text" placeholder="아이디를 입력해주세요." name="id"
