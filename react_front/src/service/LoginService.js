@@ -1,12 +1,5 @@
 import axios from "axios"
 
-const simpleRequest = () => {
-    axios.get('/api/test')
-        .then((res) => {
-            console.log(res.data);
-        })
-}
-
 const loginRequest = async (id, password) => {
 
     let body = {
@@ -40,4 +33,4 @@ const loginRequest = async (id, password) => {
     }
 }
 
-export { simpleRequest, loginRequest }
+export { loginRequest }

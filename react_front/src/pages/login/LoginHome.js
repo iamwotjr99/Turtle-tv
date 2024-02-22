@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate} from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { loginFail, loginSuccess } from "../../features/login/loginSlice";
 import { loginRequest } from "../../service/LoginService";
@@ -16,6 +16,7 @@ export default function LoginHome() {
     const [isRigtPanel, setIsRightPanel] = useState(false);
 
     const dispatch = useDispatch();
+    const navigate = useNavigate();
 
     const onClickLogin = (e) => {
         e.preventDefault();
@@ -23,6 +24,7 @@ export default function LoginHome() {
             if(res) {
                 dispatch(loginSuccess(res));
                 console.log("Success! onClickLogin: :", res);
+                navigate('/')
             } else {
                 dispatch(loginFail(res));
                 console.log("Fail.. onClickLogin: :", res);
@@ -31,6 +33,7 @@ export default function LoginHome() {
 
         setInputId("")
         setInputPassword("")
+
     }
 
     return (
@@ -74,7 +77,7 @@ export default function LoginHome() {
                     <input type="password" placeholder="비밀번호를 입력해주세요." name="password"
                         value={inputPassword}
                         onChange={(e) => setInputPassword(e.target.value)}/>
-                    <Link href="#">비밀번호를 까먹으셨습니까?</Link>
+                    <Link href="#">비밀번호를 잊으셨나요?</Link>
                     <button
                         onClick={() => setIsRightPanel(false)}>
                         로그인
