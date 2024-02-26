@@ -9,6 +9,7 @@ import java.util.List;
 import java.util.Optional;
 
 public interface SpringDataJpaMemberRepo extends JpaRepository<Member, Long> {
+    Optional<Member> findById(String id);
     @Query("select m from Member m where m.id = :id")
     Optional<Member> findByLoginId(@Param("id") String LoginId);
 }

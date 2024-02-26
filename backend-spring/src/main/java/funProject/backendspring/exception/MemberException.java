@@ -1,6 +1,6 @@
 package funProject.backendspring.exception;
 
-public class MemberException extends RuntimeException{
+public class MemberException extends RuntimeException {
     public MemberException() {
     }
 

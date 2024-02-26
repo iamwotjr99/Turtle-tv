@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link, useNavigate} from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { loginFail, loginSuccess } from "../../features/login/loginSlice";
-import { loginRequest } from "../../service/LoginService";
+import { loginRequest, signUpRequest } from "../../service/LoginService";
 import {faFacebook, faGooglePlusG, faLinkedin} from "@fortawesome/free-brands-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "../../css/loginHome.css";
@@ -36,10 +36,26 @@ export default function LoginHome() {
 
     }
 
+    const onClickSignUp = (e) => {
+        e.preventDefault();
+        signUpRequest(inputName, inputId, inputPassword).then((res) => {
+            console.log("[onClickSignUp]: ", res);
+
+            if(res === "Created") {
+                alert("회원 가입 성공!")
+                setIsRightPanel(false)
+            }
+        })
+
+        setInputName("")
+        setInputId("")
+        setInputPassword("")
+    }
+
     return (
         <div className={`container${isRigtPanel ? " right-panel-active" : ""}`} id="container">
             <div className="form-container sign-up-container">
-                <form>
+                <form onSubmit={onClickSignUp}>
                     <h1>회원 가입</h1>
                     <div className="social-container">
                         <FontAwesomeIcon className="social-btn" icon={faFacebook} />

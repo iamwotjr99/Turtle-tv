@@ -1,6 +1,5 @@
 package funProject.backendspring.exception;
 
-import funProject.backendspring.controller.LoginController;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -20,17 +19,24 @@ public class ExControllerAdvice {
         return new ErrorResult("BAD", e.getMessage());
     }
 
-    @ExceptionHandler
-    public ResponseEntity<ErrorResult> memberExHandle(MemberException e) {
-        log.error("[exception Handle] ex", e);
-        ErrorResult errorResult = new ErrorResult("MEMBER-EX", e.getMessage());
-        return new ResponseEntity<>(errorResult, HttpStatus.BAD_REQUEST);
-    }
-
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
     @ExceptionHandler
     public ErrorResult exHandle(Exception e) {
         log.error("[exception Handle] ex", e);
         return new ErrorResult("EX", "내부 오류");
+    }
+
+    @ExceptionHandler
+    public ResponseEntity<ErrorResult> memberExHandle(MemberException e) {
+        log.error("[Member-exception Handle] member ex", e);
+        ErrorResult errorResult = new ErrorResult("MEMBER-EX", e.getMessage());
+        return new ResponseEntity<>(errorResult, HttpStatus.BAD_REQUEST);
+    }
+
+    @ResponseStatus(HttpStatus.UNAUTHORIZED)
+    @ExceptionHandler
+    public ErrorResult memberSessionExHandle(UnAuthException e) {
+        log.info("[Member-Session-exception Handle] session ex", e);
+        return new ErrorResult("SESSION-EX", e.getMessage());
     }
 }

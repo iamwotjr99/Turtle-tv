@@ -7,16 +7,16 @@ const loginRequest = async (id, password) => {
         password: password
     }
 
-    let returnLoginState;
+    let returnResult;
     
     try {
         await axios.post('/api/login', body)
         .then((res) => {
-            console.log("loginService: : ", res.data)
-            returnLoginState = res.data
+            console.log("[loginService-LOGIN] : ", res.data)
+            returnResult = res.data
         });
     
-        return returnLoginState
+        return returnResult
 
     } catch (error) {
         console.log("error: ", error.response.data.message);
@@ -33,4 +33,26 @@ const loginRequest = async (id, password) => {
     }
 }
 
-export { loginRequest }
+const signUpRequest = async (name, id, password) => {
+    let body =  {
+        name: name,
+        id: id,
+        password: password,
+    }
+
+    let returnResult
+
+    try {
+        await axios.post('/api/signUp', body)
+        .then((res) => {
+            console.log("[loginService-SIGNUP] : ", res.statusText)
+            returnResult = res.statusText
+        })
+    } catch(error) {
+        console.log("error: ", error.response)
+    }
+    
+    return returnResult;
+}
+
+export { loginRequest, signUpRequest }
