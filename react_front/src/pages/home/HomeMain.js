@@ -1,6 +1,11 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { homeSessionRequest } from "../../service/homeService";
+import Toolbar from "../../component/Toolbar";
+import HomeBody from "./homeBody";
+import HeaderLogo from "../../component/Header_Logo";
+import HeaderSide from "../../component/HeaderSide";
+import "../../css/homeMain.css"
 
 export default function HomeMain() {
 
@@ -12,7 +17,7 @@ export default function HomeMain() {
         homeSessionRequest()
         .then((res) => {
             console.log(res);
-            
+
             if(res === 401) {
                 navigate('/login');
             }
@@ -20,8 +25,11 @@ export default function HomeMain() {
     }, )
 
     return (
-        <div>
-            <h1> home </h1>
+        <div className="home_main">
+            <HeaderLogo />
+            <Toolbar />
+            <HeaderSide />
+            <HomeBody />
         </div>
     )
 }

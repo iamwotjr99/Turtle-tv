@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg 
+    xmlns="http://www.w3.org/2000/svg" 
+    viewBox="-8 -8 40 40" 
+    width="current" 
+    height="current" 
+    fill="current" 
+    preserveAspectRatio="none"
+>
+    <rect y="11" width="24" height="2" rx="1"/>
+    <rect y="4" width="24" height="2" rx="1"/>
+    <rect y="18" width="24" height="2" rx="1"/>
+</svg>

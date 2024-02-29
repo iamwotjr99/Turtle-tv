@@ -1,0 +1,14 @@
+h1.header_logo {
+    display: flex;
+    left: 70px;
+    position: fixed;
+    z-index: 400;
+    top: 0;
+}
+
+.header_item {
+    outline: none;
+    cursor: pointer;
+    text-decoration: none;
+    color: #FFFFFF;
+}

@@ -1,9 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
-
-* {
-  box-sizing: border-box;
-}
-
 body {
     background: #f6f5f7;
     display: flex;
@@ -15,16 +9,16 @@ body {
     margin: -20px 0 50px;
 }
 
-h1 {
+.form-container h1 {
     font-weight: bold;
     margin: 0;
 }
 
-h2 {
+.form-container h2 {
     text-align: center;
 }
 
-p {
+.form-container p {
     font-size: 14px;
     font-weight: bold;
     line-height: 20px;
@@ -32,11 +26,11 @@ p {
     margin: 20px 0px 30px;
 }
 
-span {
+.form-container span {
     font-size: 12px;
 }
 
-button {
+.form-container button {
     border-radius: 20px;
     border: 1px solid #347701;
     background-color: #347701;
@@ -59,10 +53,14 @@ button:focus {
 
 button.ghost {
     background-color: transparent;
-    border-color: #FFFFFF;
+    border-radius: 20px;
+    border: 1px solid #FFFFFF;
+    color: #FFFFFF;
+    letter-spacing: 1px;
+    padding: 12px 45px;
 }
 
-form {
+.form-container form {
     background-color: #FFFFFF;
     display: flex;
     align-items: center;
@@ -73,7 +71,7 @@ form {
     text-align: center;
 }
 
-input {
+.form-container input {
     background-color: #eee;
     border: none;
     padding: 12px 15px;
