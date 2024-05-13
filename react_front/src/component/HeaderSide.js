@@ -13,7 +13,7 @@ export default function HeaderSide() {
             <div className="header_side_wrapper">
                 <header className="header_side_area">
                     <button type="button" className="header_side_button">
-                        <MenuBuger width="40" height="40"  fill="#FFFFFF"/>
+                        <MenuBuger width="40" height="40"  fill="#347701"/>
                     </button>
                 </header>
                 <section className="header_side_section">

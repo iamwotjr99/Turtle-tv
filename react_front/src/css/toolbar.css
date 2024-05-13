@@ -1,6 +1,6 @@
 .toolbar_container {
-    background-color: #141517;
-    color: #FFFFFF;
+    background-color: #ffffff;
+    color: #347701;
     height: 60px;
     position: fixed;
     width: 100%;
@@ -25,7 +25,7 @@
 
 .search_form {
     align-items: center;
-    border: 1px solid #303133;
+    border: 1px solid #347701;
     border-radius: 20px;
     display: flex;
     height: 38px;
@@ -53,5 +53,5 @@
     background: 0 0;
     border: 0;
     border-radius: 0;
-    color: #FFFFFF;
+    color: #347701;
 }

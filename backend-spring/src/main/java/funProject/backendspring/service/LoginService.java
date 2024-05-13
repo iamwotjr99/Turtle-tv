@@ -28,7 +28,7 @@ public class LoginService {
 
     public void signUp(SignUpForm form) {
         if(memberRepo.findById(form.getId()).isPresent()) {
-            throw new MemberException("아이다가 중복됩니다.");
+            throw new MemberException("아이디가 중복됩니다.");
         }
 
         Member member = new Member(form.getName(), form.getId(), passwordEncoder.encode(form.getPassword()));

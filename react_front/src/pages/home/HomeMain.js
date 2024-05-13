@@ -1,10 +1,7 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { homeSessionRequest } from "../../service/homeService";
-import Toolbar from "../../component/Toolbar";
 import HomeBody from "./homeBody";
-import HeaderLogo from "../../component/Header_Logo";
-import HeaderSide from "../../component/HeaderSide";
 import "../../css/homeMain.css"
 
 export default function HomeMain() {
@@ -26,9 +23,6 @@ export default function HomeMain() {
 
     return (
         <div className="home_main">
-            <HeaderLogo />
-            <Toolbar />
-            <HeaderSide />
             <HomeBody />
         </div>
     )

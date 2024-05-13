@@ -1,6 +1,6 @@
-h1.header_logo {
+.header_logo {
     display: flex;
-    left: 70px;
+    left: 63px;
     position: fixed;
     z-index: 400;
     top: 0;
@@ -8,7 +8,7 @@ h1.header_logo {
 
 .header_item {
     outline: none;
-    cursor: pointer;
-    text-decoration: none;
-    color: #FFFFFF;
+    line-height: 0;
+    font-size: 0;
+    padding: 17px 0;
 }
